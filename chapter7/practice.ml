@@ -33,5 +33,15 @@ let taisho_x point =
 let test12 = taisho_x (0, 0) = (0, 0)
 let test13 = taisho_x (0, 1) = (0, -1)
 let test14 = taisho_x (2, -3) = (2, 3)
-(*  *)
-(*  *)
+
+(* 目的 : x と y の組を二つ受け取ってその中点の座標を返す *)
+(* chuten : (float * float) -> (float * float) -> (float * float) *)
+let chuten point1 point2 =
+  match point1 with (x1, y1) ->
+	match point2 with (x2, y2) ->
+	(x1 +. (x2 -. x1) /. 2., y1 +. (y2 -. y1) /. 2.)
+(* test *)
+let test15 = chuten (-1., -1.) (1., 1.) = (0., 0.)
+let test16 = chuten (0., 0.) (1., 1.) = (0.5, 0.5)
+let test17 = chuten (1., 1.) (5., 5.) = (3., 3.)
+let test18 = chuten (5., 5.) (1., 1.) = (3., 3.)
