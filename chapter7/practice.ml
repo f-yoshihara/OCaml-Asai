@@ -23,3 +23,15 @@ let seiseki score = match score with (name, grade) -> name ^ "さんの成績は
 let test9  = seiseki ("A", "A") = "Aさんの成績はAです"
 let test10 = seiseki ("B", "S") = "Bさんの成績はSです"
 let test11 = seiseki ("吉原", "C") = "吉原さんの成績はCです"
+
+(* 目的 : x と y の組を受け取って x 軸について対象な座標を返す *)
+(* taisho_x : int * int -> int * int *)
+let taisho_x point =
+  match point with
+	(x, y) -> (x, -y)
+(* test *)
+let test12 = taisho_x (0, 0) = (0, 0)
+let test13 = taisho_x (0, 1) = (0, -1)
+let test14 = taisho_x (2, -3) = (2, 3)
+(*  *)
+(*  *)
