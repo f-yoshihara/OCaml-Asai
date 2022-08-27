@@ -7,3 +7,10 @@
 ## Impressions
 
 [memo.md](https://github.com/f-yoshihara/OCaml-Asai/blob/master/memo.md)
+
+## How to execute
+
+```sh
+ocaml
+# #use "xxx.ml";;
+```
