@@ -17,7 +17,7 @@ let test7 = goukei_to_heikin 1 2 3 4 5 = (15, 3.)
 let test8 = goukei_to_heikin 2 4 6 8 9 = (29, 5.8)
 
 (* 目的 : 名前と成績の組を受け取ってそれらを通知する文字列を返す *)
-(* seiseki : (string, int) -> string *)
+(* seiseki : string * string -> string *)
 let seiseki score = match score with (name, grade) -> name ^ "さんの成績は" ^ grade ^ "です"
 (* test *)
 let test9  = seiseki ("A", "A") = "Aさんの成績はAです"
